@@ -11,12 +11,10 @@ function toggleSkills(element) {
     }
 }
 
-// LANDING ANIMATION TRIGGER
 window.addEventListener('load', () => {
-    window.scrollTo(0, 0); // Scroll to top on load
+    window.scrollTo(0, 0);
     const loader = document.getElementById('landing-loader');
     if (loader) {
-        // Durée de l'animation totale (environ 2s) + petite pause
         setTimeout(() => {
             loader.classList.add('hidden');
         }, 2200);

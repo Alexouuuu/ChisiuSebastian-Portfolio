@@ -12,7 +12,6 @@ body {
     padding: 2rem;
 }
 
-/* TYPOGRAPHIE */
 h1 {
     font-size: 8vw;
     font-weight: 400;
@@ -42,7 +41,7 @@ p {
     color: #555;
 }
 
-/* LAYOUT */
+
 header.hero-header {
     min-height: 85vh;
     display: flex;
@@ -50,7 +49,6 @@ header.hero-header {
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    /* Ensures image doesn't spill out */
 }
 
 .hero-image-wrapper {
@@ -58,12 +56,9 @@ header.hero-header {
     top: 0;
     right: 0;
     width: 50%;
-    /* Image takes up right half or adjust as needed */
     height: 100%;
     z-index: -1;
-    /* Behind text */
     opacity: 0.8;
-    /* Slight transparency */
 }
 
 .hero-image-wrapper img {
@@ -71,12 +66,9 @@ header.hero-header {
     height: 100%;
     object-fit: cover;
     object-position: center 20%;
-    /* Align slightly top to control content position */
     filter: grayscale(100%);
-    /* Stylish Black & White */
 }
 
-/* TYPOGRAPHY OVERRIDES FOR HERO */
 .hero-title {
     font-size: 8vw;
     font-weight: 400;
@@ -86,7 +78,6 @@ header.hero-header {
     text-transform: uppercase;
     position: relative;
     z-index: 2;
-    /* Text on top */
 }
 
 .hero-title .name-part {
@@ -95,7 +86,6 @@ header.hero-header {
     font-style: italic;
     font-weight: 600;
     font-size: 1.2em;
-    /* Bigger than role */
 }
 
 .hero-title .role-part {
@@ -103,17 +93,14 @@ header.hero-header {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 800;
     -webkit-text-stroke: 1px #1a1a1a;
-    /* Outline effect possibility or just bold */
     color: #1a1a1a;
     margin-left: 2rem;
-    /* Indent effect */
 }
 
 .hero-content p {
     position: relative;
     z-index: 2;
     background: rgba(244, 244, 244, 0.7);
-    /* Readable bg if overlap */
     padding: 1rem;
     backdrop-filter: blur(5px);
     border-radius: 8px;
@@ -124,7 +111,6 @@ section {
     margin: 6rem 0;
 }
 
-/* SERVICES / COMPETENCES (LISTE) */
 .services-list {
     list-style: none;
 }
@@ -138,7 +124,6 @@ section {
     align-items: center;
     transition: padding-left 0.3s ease;
     flex-wrap: wrap;
-    /* Ajouté pour gérer les icônes */
 }
 
 .services-list li:hover {
@@ -155,7 +140,6 @@ section {
     transform: rotate(45deg);
 }
 
-/* SKILL ICONS */
 .skill-icons {
     display: none;
     width: 100%;
@@ -178,7 +162,6 @@ section {
     transform: scale(1.2);
 }
 
-/* PROJETS */
 .project-item {
     display: block;
     border-top: 1px solid #000;
@@ -221,7 +204,6 @@ section {
     color: #666;
 }
 
-/* PROJECT DETAILS ON HOVER */
 .project-details {
     max-height: 0;
     overflow: hidden;
@@ -246,7 +228,6 @@ section {
     font-weight: 500;
 }
 
-/* FOOTER */
 footer {
     border-top: 2px solid #1a1a1a;
     padding-top: 2rem;
@@ -256,7 +237,6 @@ footer {
     text-transform: uppercase;
 }
 
-/* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
     body {
         padding: 1.5rem;
@@ -315,7 +295,6 @@ footer {
 
     .project-number {
         display: none;
-        /* Hide number on small screens to save space or adjust */
     }
 
     footer {
@@ -325,7 +304,6 @@ footer {
     }
 }
 
-/* LANDING LOADER ANIMATION */
 #landing-loader {
     position: fixed;
     top: 0;
@@ -333,26 +311,22 @@ footer {
     width: 100%;
     height: 100%;
     background-color: #f4f4f4;
-    /* Same as body bg to blend */
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1;
     transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-    /* Ease in out quint or similar for smoothness */
 }
 
 #landing-loader.hidden {
     transform: translateY(-100%);
-    /* Slides entirely up */
     pointer-events: none;
 }
 
 .loader-content {
     text-align: center;
     overflow: hidden;
-    /* For reveal effects if needed */
 }
 
 .loader-name {
@@ -381,7 +355,6 @@ footer {
     position: relative;
 }
 
-/* Stylish line reveal for "DEV WEB" */
 .loader-role::after {
     content: '';
     position: absolute;
