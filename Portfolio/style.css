@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+    line-height: 1.4;
+    padding: 2rem;
+}
+
+/* TYPOGRAPHIE */
+h1 {
+    font-size: 8vw;
+    font-weight: 400;
+    letter-spacing: -2px;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #555;
+}
+
+/* LAYOUT */
+header.hero-header {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    /* Ensures image doesn't spill out */
+}
+
+.hero-image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    /* Image takes up right half or adjust as needed */
+    height: 100%;
+    z-index: -1;
+    /* Behind text */
+    opacity: 0.8;
+    /* Slight transparency */
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    /* Align slightly top to control content position */
+    filter: grayscale(100%);
+    /* Stylish Black & White */
+}
+
+/* TYPOGRAPHY OVERRIDES FOR HERO */
+.hero-title {
+    font-size: 8vw;
+    font-weight: 400;
+    letter-spacing: -2px;
+    line-height: 0.85;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    /* Text on top */
+}
+
+.hero-title .name-part {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.2em;
+    /* Bigger than role */
+}
+
+.hero-title .role-part {
+    display: block;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    -webkit-text-stroke: 1px #1a1a1a;
+    /* Outline effect possibility or just bold */
+    color: #1a1a1a;
+    margin-left: 2rem;
+    /* Indent effect */
+}
+
+.hero-content p {
+    position: relative;
+    z-index: 2;
+    background: rgba(244, 244, 244, 0.7);
+    /* Readable bg if overlap */
+    padding: 1rem;
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+section {
+    margin: 6rem 0;
+}
+
+/* SERVICES / COMPETENCES (LISTE) */
+.services-list {
+    list-style: none;
+}
+
+.services-list li {
+    font-size: 3rem;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding-left 0.3s ease;
+    flex-wrap: wrap;
+    /* Ajouté pour gérer les icônes */
+}
+
+.services-list li:hover {
+    padding-left: 20px;
+    color: #555;
+    cursor: pointer;
+}
+
+.services-list li .arrow {
+    transition: transform 0.3s ease;
+}
+
+.services-list li.open .arrow {
+    transform: rotate(45deg);
+}
+
+/* SKILL ICONS */
+.skill-icons {
+    display: none;
+    width: 100%;
+    padding: 1.5rem 0;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.skill-icons.active {
+    display: flex;
+}
+
+.skill-icons img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.skill-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* PROJETS */
+.project-item {
+    display: block;
+    border-top: 1px solid #000;
+    padding: 2rem 0;
+    cursor: default;
+}
+
+.project-item a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.project-item a:hover {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.project-number {
+    font-family: monospace;
+    margin-right: 2rem;
+}
+
+.project-title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.project-desc {
+    color: #666;
+}
+
+/* PROJECT DETAILS ON HOVER */
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.project-item:hover .project-details {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 1.5rem;
+}
+
+.project-tags span {
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* FOOTER */
+footer {
+    border-top: 2px solid #1a1a1a;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+    body {
+        padding: 1.5rem;
+    }
+
+    header.hero-header {
+        min-height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .hero-image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        top: auto;
+        right: auto;
+        margin-bottom: 2rem;
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+
+    .hero-title .name-part {
+        font-size: 1.2em;
+    }
+
+    .hero-title .role-part {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    section {
+        margin: 4rem 0;
+    }
+
+    .services-list li {
+        font-size: 1.8rem;
+    }
+
+    .project-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-item {
+        align-items: flex-start;
+    }
+
+    .project-number {
+        display: none;
+        /* Hide number on small screens to save space or adjust */
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* LANDING LOADER ANIMATION */
+#landing-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    /* Same as body bg to blend */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    /* Ease in out quint or similar for smoothness */
+}
+
+#landing-loader.hidden {
+    transform: translateY(-100%);
+    /* Slides entirely up */
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+    overflow: hidden;
+    /* For reveal effects if needed */
+}
+
+.loader-name {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #1a1a1a;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.2s;
+}
+
+.loader-role {
+    display: block;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    color: #555;
+    margin-top: 1rem;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: revealScale 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.8s;
+    position: relative;
+}
+
+/* Stylish line reveal for "DEV WEB" */
+.loader-role::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transform: translateX(-50%);
+    animation: expandLine 0.6s ease-out forwards 1.2s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes expandLine {
+    to {
+        width: 40px;
+    }
+}
