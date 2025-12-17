@@ -208,24 +208,57 @@ section {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
+    padding-left: 2rem;
+    /* Indentation légère pour aligner avec le titre */
 }
 
 .project-item:hover .project-details {
-    max-height: 300px;
+    max-height: 500px;
+    /* Augmenté pour tout contenir */
     opacity: 1;
     margin-top: 1.5rem;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-item .label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #000;
+    margin-bottom: 0.3rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2px;
+    width: fit-content;
+}
+
+.detail-item .value {
+    font-size: 1rem;
+    color: #444;
 }
 
 .project-tags span {
     display: inline-block;
     background: #e0e0e0;
-    padding: 4px 10px;
-    border-radius: 15px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    /* Plus carré pour un look 'tech' */
     font-size: 0.8rem;
     margin-right: 8px;
     margin-top: 8px;
     font-weight: 500;
+    color: #1a1a1a;
 }
 
 footer {
@@ -301,6 +334,20 @@ footer {
         flex-direction: column;
         gap: 1.5rem;
         text-align: center;
+    }
+
+    /* Responsive About */
+    .about-layout {
+        flex-direction: column-reverse;
+        /* CV en bas ou en haut ? En général CV en premier ou dernier sur mobile. Ici je mets colonne normale */
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-cv {
+        width: 100%;
+        text-align: left;
+        flex: auto;
     }
 }
 
@@ -385,4 +432,89 @@ footer {
     to {
         width: 40px;
     }
+}
+
+/* About Section */
+.about-layout {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    max-width: 1200px;
+}
+
+.about-cv {
+    flex: 0 0 250px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 800px;
+}
+
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn-cv .icon {
+    font-size: 1.2rem;
+}
+
+.btn-cv:hover {
+    background: #1a1a1a;
+    color: #fff;
+    padding-left: 2rem;
+}
+
+.about-main {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #111;
+}
+
+.highlight {
+    font-style: italic;
+    color: #444;
+    position: relative;
+    display: inline-block;
+}
+
+.about-sub {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.about-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-footer .separator {
+    color: #ccc;
+}
+
+.about-extra {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 1rem;
+    font-style: italic;
 }

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Portfolio/style.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
 
     <header class="hero-header">
         <div class="hero-image-wrapper">
-            <img src="profile.png" alt="Profile Chisiu">
+            <img src="Portfolio/profile.png" alt="Profile Chisiu">
         </div>
 
         <div class="top-bar">
@@ -33,7 +33,7 @@
         <div class="hero-content">
             <h1 class="hero-title">
                 <span class="name-part">Chisiu</span>
-                <span class="role-part">Étudiant<br>en Dev</span>
+                <span class="role-part">Dev<br>Web</span>
             </h1>
             <p>
                 Étudiant passionné par le numérique, je développe des projets web alliant créativité et technique.
@@ -45,19 +45,35 @@
     <section>
         <div class="small-text">À propos</div>
         <br>
-        <p style="font-size: 2rem; max-width: 900px;">
-            Étudiant en BUT MMI, j'allie théorie et pratique pour construire mon parcours vers le développement web.
-            <br><br>
-            Ce qui me passionne ? Donner vie à des interfaces visuelles impactantes côté front-end.
-            <br><br>
-            <span style="font-size: 1.2rem; color: #555;">
-                Rigoureux. Curieux. Team player. <br>
-                Objectif : devenir développeur web et, un jour, lancer ma propre startup.
-            </span>
-        </p>
-        <p style="font-size: 1rem; color: #888; margin-top: 1rem;">
-            🏎️ Fan d'automobile et supporter de Lewis Hamilton.
-        </p>
+        <div class="about-layout">
+
+            <div class="about-text">
+                <p class="about-main">
+                    Créer des expériences web <span class="highlight">uniques</span> et <span
+                        class="highlight">interactives</span>.
+                </p>
+                <p class="about-sub">
+                    Actuellement en <strong>BUT MMI</strong>, je transforme la théorie en interfaces vivantes.
+                    <br>Mon terrain de jeu ? Le Front-End.
+                </p>
+                <div class="about-footer">
+                    <span class="trait">Rigoureux</span>
+                    <span class="separator">•</span>
+                    <span class="trait">Curieux</span>
+                    <span class="separator">•</span>
+                    <span class="trait">Ambitieux</span>
+                </div>
+                <p class="about-extra">
+                    🏎️ Passionné par la F1 & supporter de Hamilton
+                </p>
+            </div>
+
+            <div class="about-cv">
+                <a href="Portfolio/CV_Chisiu_Sebastian.pdf" class="btn-cv" target="_blank">
+                    <span class="icon">↓</span> Télécharger mon CV
+                </a>
+            </div>
+        </div>
     </section>
 
     <section>
@@ -70,7 +86,29 @@
                 <a href="https://mloks77.github.io/SAE302-LeCube/" target="_blank">Explorer ↗</a>
             </div>
             <div class="project-details">
-                <p>Un webdocumentaire interactif et immersif explorant toutes les facettes du Rubik's Cube.</p>
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="label">Sujet :</span>
+                        <span class="value">Dans le cadre de la SAE 302 , nous devions réaliser un webdocumentaire et
+                            nous avons choisi le speedcubing. Pour y parvenir on a tourné les vidéos , monté , rédigé
+                            les articles et codé le site.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">But :</span>
+                        <span class="value">Proposer un site web interactif et immersif pour faire découvrir le monde du
+                            speedcubing a notre manière.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Collaborateurs :</span>
+                        <span class="value">Témi Kergastel et Maxime Derènes</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Difficultés :</span>
+                        <span class="value">Difficultés lors du tournage avec une caméra qui avait des problèmes de
+                            paramétrage et lors de la création de la galerie photo pour trouver un design
+                            interactif.</span>
+                    </div>
+                </div>
                 <div class="project-tags">
                     <span>HTML</span> <span>CSS</span> <span>JavaScript</span> <span>TailwindCSS</span>
                     <span>GSAP</span>
@@ -85,7 +123,27 @@
                 <a href="https://alexouuuu.github.io/ACF2L/" target="_blank">Explorer ↗</a>
             </div>
             <div class="project-details">
-                <p>Refonte moderne et responsive du site de l'association ACF2L.</p>
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="label">Sujet :</span>
+                        <span class="value">Refonte visuelle et structurelle du site de l'association ACF2L dans le
+                            cadre d'un projet concluant notre apprentissage de Bootstrap.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">But :</span>
+                        <span class="value">Moderniser le site et le rendre responsive, tout en mettant en oeuvre les
+                            compétences en programmation responsive qu'on a appris en cours.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Collaborateurs :</span>
+                        <span class="value">Témi Kergastel</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Difficultés :</span>
+                        <span class="value">Difficultés à trouver des inspirations pour le design et à trouver les
+                            images de bonne qualité.</span>
+                    </div>
+                </div>
                 <div class="project-tags">
                     <span>HTML</span> <span>CSS</span> <span>Bootstrap</span>
                 </div>
@@ -99,7 +157,31 @@
                 <a href="https://github.com/farell7/SAE_201-203" target="_blank">Explorer ↗</a>
             </div>
             <div class="project-details">
-                <p>Plateforme de gestion et de réservation de matériel audiovisuel pour l'université.</p>
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="label">Sujet :</span>
+                        <span class="value">Dans le cadre de la SAE 201-203 , nous devions réaliser un site web pour
+                            permettre aux étudiants de réserver du matériel audiovisuel ou réserver une salle de cours
+                            plus facilement , et aux enseignants de pouvoir gérer toutes les demandes de manière plus
+                            efficace et pratique.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">But :</span>
+                        <span class="value">Ce projet visait a mettre en oeuvre nos compétences en Back-End dont on
+                            était en apprentissage et combiner tout ça avec ce qu'on a vu tout au long de l'année
+                            scolaire.</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Collaborateurs :</span>
+                        <span class="value">Imène Lachab et Farrel Tshoki(Ancien étudiant MMI Meaux)</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Difficultés :</span>
+                        <span class="value">Les difficultés étaient qu'à la base on était 4 , mais un camarade a quitté
+                            le projet en cours en plein milieu ce qui a chamboulé toute l'organisation , et on a dû donc
+                            tout réorganiser en ayant plus de travail par personne que prévu en un temps réduit.</span>
+                    </div>
+                </div>
                 <div class="project-tags">
                     <span>PHP</span> <span>MySQL</span> <span>HTML/CSS</span>
                     <span>Bootstrap</span> <span>Gestion de stock</span>
@@ -191,7 +273,7 @@
         <div>Basé à Paris</div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="Portfolio/script.js"></script>
 
 </body>
 
